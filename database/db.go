@@ -14,11 +14,11 @@ var (
 )
 
 func ConectaComBancoDeDados() {
-	host := os.Getenv("HOST")
-	user := os.Getenv("USER")
-	password := os.Getenv("PASSWORD")
-	dbname := os.Getenv("DBNAME")
-	port := os.Getenv("DBPORT")
+	host := os.Getenv("DB_HOST")
+	user := os.Getenv("DB_USER")
+	password := os.Getenv("DB_PASSWORD")
+	dbname := os.Getenv("DB_NAME")
+	port := os.Getenv("DB_PORT")
 	if host == "" || user == "" || password == "" || dbname == "" || port == "" {
 		log.Panic("Variáveis de ambiente não configuradas")
 	}
